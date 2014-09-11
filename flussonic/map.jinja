@@ -1,0 +1,9 @@
+# vim: sts=2 ts=2 sw=2 et ai
+{% set flussonic  = salt['grains.filter_by']({
+  'Debian': {
+  },
+  'FreeBSD': {
+  },
+  'default': {
+  },
+}, merge=salt['pillar.get']('flussonic')) %}

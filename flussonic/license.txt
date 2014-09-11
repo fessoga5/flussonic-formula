@@ -1,0 +1,3 @@
+{%- from "flussonic/map.jinja" import flussonic with context %}
+{%- set fluss = salt['pillar.get']('flussonic', {}) %}
+{{- fluss.get ('license', "")}}
