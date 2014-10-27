@@ -40,6 +40,12 @@
     - mode: 775
     - source: salt://flussonic/files/zabbix/discovery.py
 
+/etc/zabbix/{{ zabbix.dir | default("scripts") }}/flussonic/isrunning.sh:
+  file.managed:
+    - user: root
+    - mode: 775
+    - source: salt://flussonic/files/zabbix/isrunning.sh
+
 # check parametrs
 #
 /etc/zabbix/{{ zabbix.dir | default("scripts") }}/flussonic/streaminfo.py:
