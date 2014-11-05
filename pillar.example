@@ -6,7 +6,10 @@ flussonic:
   streams:
     - name: test 
       url: udp://@238.0.1.1:1234
-      dvr: /srv/dvr
+      dvr:
+        path: /srv/dvr
+        period: 5d
+        percent: 90%
       transkoder:
         - vb: 2048k
           preset: slow
